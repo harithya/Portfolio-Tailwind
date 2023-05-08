@@ -1,3 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-[url('../circle.svg')] bg-no-repeat bg-left-bottom;
+}
+
+@layer components {
+  .form-group label {
+    @apply text-black mb-3;
+  }
+
+  .form-group {
+    @apply flex flex-col;
+  }
+
+  .form-group .form-control {
+    @apply border-2 border-primary py-3 px-5 rounded-lg;
+  }
+
+  .form-group .form-control.form-error {
+    @apply border-2 border-red-500;
+  }
+  .form-group .error-message {
+    @apply text-red-500;
+  }
+
+  .btn {
+    @apply py-2 px-5 rounded-lg shadow-md font-bold;
+  }
+  .btn-primary {
+    @apply shadow-primary hover:bg-primary-focus bg-primary text-white;
+  }
+  .btn-secondary {
+    @apply shadow-gray-300 hover:bg-gray-200 bg-white text-primary;
+  }
+}
